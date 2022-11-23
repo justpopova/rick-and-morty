@@ -6,6 +6,8 @@ import com.springboot.rickandmorty.model.MovieCharacter;
 import com.springboot.rickandmorty.service.MovieCharacterService;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -24,12 +26,14 @@ public class MovieCharacterController {
     }
 
     @GetMapping("/random")
+    @ApiOperation(value = "det random character")
     public CharacterResponseDto getRandom() {
         MovieCharacter character = characterService.getRandomCharacter();
         return mapper.toResponseDto(character);
     }
 
     @GetMapping("/by-name")
+    @ApiOperation(value = "get character by name")
     public List<CharacterResponseDto> findAllByName(@RequestParam("name") String namePart) {
         return characterService.findAllByNameContains(namePart)
                 .stream()
