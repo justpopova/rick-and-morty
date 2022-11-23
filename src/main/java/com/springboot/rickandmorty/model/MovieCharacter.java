@@ -1,7 +1,5 @@
 package com.springboot.rickandmorty.model;
 
-import lombok.Data;
-
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -10,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import lombok.Data;
 
 @Data
 @Entity

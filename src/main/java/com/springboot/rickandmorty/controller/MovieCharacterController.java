@@ -4,10 +4,9 @@ import com.springboot.rickandmorty.dto.CharacterResponseDto;
 import com.springboot.rickandmorty.dto.mapper.MovieCharacterMapper;
 import com.springboot.rickandmorty.model.MovieCharacter;
 import com.springboot.rickandmorty.service.MovieCharacterService;
+import io.swagger.annotations.ApiOperation;
 import java.util.List;
 import java.util.stream.Collectors;
-
-import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

@@ -63,7 +63,8 @@ public class MovieCharacterServiceImpl implements MovieCharacterService {
                 .collect(Collectors.toMap(ApiCharacterDto::getId, Function.identity()));
         Set<Long> externalIds = externalDtos.keySet();
 
-        List<MovieCharacter> existingCharacters = movieCharacterRepository.findAllByExternalIdIn(externalIds);
+        List<MovieCharacter> existingCharacters = movieCharacterRepository
+                .findAllByExternalIdIn(externalIds);
 
         Map<Long, MovieCharacter> existingCharactersWithIds = existingCharacters.stream()
                 .collect(Collectors.toMap(MovieCharacter::getExternalId, Function.identity()));
