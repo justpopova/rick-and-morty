@@ -1,4 +1,5 @@
 ***Rick-And-Morty***
+
 **Features**
 - Randomly shows information about some character
 - Search characters by the part of their name
