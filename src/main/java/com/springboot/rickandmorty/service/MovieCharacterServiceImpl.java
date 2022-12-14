@@ -31,7 +31,7 @@ public class MovieCharacterServiceImpl implements MovieCharacterService {
         this.mapper = mapper;
     }
 
-    @Scheduled(cron = "0 8 * * * ?")
+    @Scheduled(cron = "30 * * * *")
     @Override
     public void syncExternalCharacters() {
         log.info("syncExternalCharacters method was invoked at " + LocalDateTime.now());
